@@ -86,62 +86,42 @@
   <script>
     const cardsByTheme = {
       "grammaire": [
-        {
-          "question": "Quel est le COD dans : Elle a offert un cadeau à son frère ?",
-          "answer": "un cadeau",
-          "rule": "Le COD est ce qui subit directement l’action du verbe."
-        },
-        {
-          "question": "Quel est le sujet dans : Paul cuisine un gâteau ?",
-          "answer": "Paul",
-          "rule": "Le sujet est celui qui fait l’action du verbe."
-        },
-        {
-          "question": "Quel est le complément circonstanciel dans : Il mange vite le matin ?",
-          "answer": "le matin",
-          "rule": "Un complément circonstanciel précise le lieu, le temps, la manière..."
-        },
-        {
-          "question": "Quelle est la nature de 'vite' ?",
-          "answer": "Adverbe",
-          "rule": "Un adverbe modifie un verbe, un adjectif ou un autre adverbe."
-        }
+        {"question":"Quel est le COD dans : Elle a offert un cadeau à son frère ?","answer":"un cadeau","rule":"Le COD est ce qui subit directement l’action du verbe."},
+        {"question":"Quel est le sujet dans : Paul cuisine un gâteau ?","answer":"Paul","rule":"Le sujet est celui qui fait l’action du verbe."},
+        {"question":"Quel est le complément circonstanciel dans : Il mange vite le matin ?","answer":"le matin","rule":"Un complément circonstanciel précise le lieu, le temps, la manière..."},
+        {"question":"Quelle est la nature de 'vite' ?","answer":"Adverbe","rule":"Un adverbe modifie un verbe, un adjectif ou un autre adverbe."},
+        {"question":"Dans la phrase : 'Elle s'endort tard', quelle est la fonction de 'tard' ?","answer":"Complément circonstanciel de temps","rule":"Il précise quand l’action se déroule."},
+        {"question":"Quel est le COI dans : Elle parle à son frère ?","answer":"à son frère","rule":"Le COI est introduit par une préposition et complète le verbe."},
+        {"question":"Quelle est la fonction de 'avec Paul' dans : Elle travaille avec Paul ?","answer":"Complément circonstanciel de manière","rule":"Il exprime la manière dont l’action est réalisée."},
+        {"question":"Quelle est la nature de 'rapidement' dans : Il court rapidement ?","answer":"Adverbe","rule":"L’adverbe modifie le verbe 'court'."},
+        {"question":"Quelle est la fonction de 'le chien' dans : Marie nourrit le chien ?","answer":"COD","rule":"C’est ce qui subit l’action de nourrir."}
       ],
       "orthographe": [
-        {
-          "question": "Choisis la bonne orthographe : a / à",
-          "answer": "Il a un chien. Il va à l'école.",
-          "rule": "'a' est un verbe, 'à' est une préposition."
-        },
-        {
-          "question": "Trouve l’erreur : Elle cest lever tard ce matin.",
-          "answer": "Elle s'est levée tard ce matin.",
-          "rule": "L'accord du participe passé avec l'auxiliaire être."
-        }
+        {"question":"Choisis la bonne orthographe : a / à","answer":"Il a un chien. Il va à l'école.","rule":"'a' est un verbe, 'à' est une préposition."},
+        {"question":"Trouve l’erreur : Elle cest lever tard ce matin.","answer":"Elle s'est levée tard ce matin.","rule":"L'accord du participe passé avec l'auxiliaire être."},
+        {"question":"Quel est le pluriel de 'bijou' ?","answer":"bijoux","rule":"Certains noms finissant par -ou prennent un x au pluriel."},
+        {"question":"Choisis entre et/est : Il ___ très gentil ___ attentionné.","answer":"est, et","rule":"'est' = verbe être, 'et' = conjonction de coordination."},
+        {"question":"Quel mot est mal orthographié : 'japponais' ?","answer":"japonais","rule":"Attention aux consonnes doublées à tort."},
+        {"question":"Complète avec 'ces' ou 'ses' : ___ chaussures sont neuves.","answer":"Ces","rule":"'Ces' désigne quelque chose, 'ses' est possessif."},
+        {"question":"Accorde correctement : Des chapeaux (blanc) ?","answer":"blancs","rule":"Accord en genre et en nombre avec le nom."}
       ],
       "conjugaison": [
-        {
-          "question": "Conjugue 'finir' au présent avec 'nous' :",
-          "answer": "nous finissons",
-          "rule": "Verbe du 2e groupe, terminaisons régulières : -issons."
-        },
-        {
-          "question": "Accord au passé composé : Elles sont (partir) ?",
-          "answer": "parties",
-          "rule": "Avec être, le participe passé s'accorde avec le sujet."
-        }
+        {"question":"Conjugue 'finir' au présent avec 'nous' :","answer":"nous finissons","rule":"Verbe du 2e groupe, terminaisons régulières : -issons."},
+        {"question":"Accord au passé composé : Elles sont (partir) ?","answer":"parties","rule":"Avec être, le participe passé s'accorde avec le sujet."},
+        {"question":"Conjugue 'avoir' à l'imparfait, 3e personne du pluriel :","answer":"ils avaient","rule":"L’imparfait prend -aient à la 3e personne du pluriel."},
+        {"question":"Futur simple, verbe 'venir', tu :","answer":"tu viendras","rule":"Les verbes irréguliers conservent leur radical modifié."},
+        {"question":"Conditionnel présent, verbe 'être', nous :","answer":"nous serions","rule":"Radical du futur + terminaisons de l’imparfait."},
+        {"question":"Présent du subjonctif, verbe 'savoir', il :","answer":"qu’il sache","rule":"Le subjonctif a ses propres conjugaisons."},
+        {"question":"Imparfait, verbe 'lancer', vous :","answer":"vous lanciez","rule":"Attention aux conjugaisons avec -cer au passé."}
       ],
       "vocabulaire": [
-        {
-          "question": "Quel est le synonyme de 'joyeux' ?",
-          "answer": "heureux, content, enjoué",
-          "rule": "Les synonymes enrichissent le vocabulaire."
-        },
-        {
-          "question": "Trouve le mot familier pour 'automobile'",
-          "answer": "bagnole",
-          "rule": "Le registre familier est souvent utilisé à l’oral."
-        }
+        {"question":"Quel est le synonyme de 'joyeux' ?","answer":"heureux, content, enjoué","rule":"Les synonymes enrichissent le vocabulaire."},
+        {"question":"Trouve le mot familier pour 'automobile'","answer":"bagnole","rule":"Le registre familier est souvent utilisé à l’oral."},
+        {"question":"Quel est l’opposé de 'sale' ?","answer":"propre","rule":"Antonymes : mots de sens contraires."},
+        {"question":"Quel est le champ lexical de l’école ?","answer":"instituteur, tableau, cartable, récréation","rule":"Un champ lexical regroupe les mots liés à un même thème."},
+        {"question":"Complète avec un mot de liaison : 'Il a révisé, ___ il a réussi.'","answer":"donc","rule":"Les connecteurs logiques montrent le lien entre les idées."},
+        {"question":"Quel est le registre de langue de 'se casser' ?","answer":"familier","rule":"C’est une expression du registre familier."},
+        {"question":"Quel est le paronyme de 'collision' ?","answer":"collusion","rule":"Les paronymes sont des mots proches mais différents."}
       ]
     };
 
