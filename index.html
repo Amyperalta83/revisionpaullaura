@@ -46,6 +46,7 @@
     button {
       padding: 0.5rem 1rem;
       margin-top: 0.5rem;
+      margin-right: 0.5rem;
       border: none;
       background-color: #3f72af;
       color: white;
@@ -76,8 +77,6 @@
         <label for="themeSelect">Choisir un thème :</label>
         <select id="themeSelect" onchange="startTheme(this.value)">
           <option value="">-- Choisir --</option>
-          <option value="orthographe">Orthographe</option>
-          <option value="grammaire">Grammaire</option>
         </select>
       </div>
       <div id="flashcardContainer"></div>
@@ -86,28 +85,62 @@
   </main>
   <script>
     const cardsByTheme = {
-      orthographe: [
+      "grammaire": [
         {
-          question: "Les pommes que j’ai mangé étaient délicieuses.",
-          answer: "Les pommes que j’ai mangées étaient délicieuses.",
-          rule: "Avec 'avoir', accord avec le COD si placé avant le verbe."
+          "question": "Quel est le COD dans : Elle a offert un cadeau à son frère ?",
+          "answer": "un cadeau",
+          "rule": "Le COD est ce qui subit directement l’action du verbe."
         },
         {
-          question: "Phrase à corriger : Il a laissée tomber la boîte.",
-          answer: "Il a laissé tomber la boîte.",
-          rule: "Avec 'laisser', le participe passé reste invariable."
+          "question": "Quel est le sujet dans : Paul cuisine un gâteau ?",
+          "answer": "Paul",
+          "rule": "Le sujet est celui qui fait l’action du verbe."
+        },
+        {
+          "question": "Quel est le complément circonstanciel dans : Il mange vite le matin ?",
+          "answer": "le matin",
+          "rule": "Un complément circonstanciel précise le lieu, le temps, la manière..."
+        },
+        {
+          "question": "Quelle est la nature de 'vite' ?",
+          "answer": "Adverbe",
+          "rule": "Un adverbe modifie un verbe, un adjectif ou un autre adverbe."
         }
       ],
-      grammaire: [
+      "orthographe": [
         {
-          question: "Quel est le COD dans : Elle a offert un cadeau à son frère ?",
-          answer: "un cadeau",
-          rule: "Le COD est ce qui subit directement l’action du verbe."
+          "question": "Choisis la bonne orthographe : a / à",
+          "answer": "Il a un chien. Il va à l'école.",
+          "rule": "'a' est un verbe, 'à' est une préposition."
         },
         {
-          question: "Vrai ou faux : 'Elle s’est lavée les mains' prend un e ?",
-          answer: "Faux",
-          rule: "Le COD 'les mains' est après le verbe : pas d'accord."
+          "question": "Trouve l’erreur : Elle cest lever tard ce matin.",
+          "answer": "Elle s'est levée tard ce matin.",
+          "rule": "L'accord du participe passé avec l'auxiliaire être."
+        }
+      ],
+      "conjugaison": [
+        {
+          "question": "Conjugue 'finir' au présent avec 'nous' :",
+          "answer": "nous finissons",
+          "rule": "Verbe du 2e groupe, terminaisons régulières : -issons."
+        },
+        {
+          "question": "Accord au passé composé : Elles sont (partir) ?",
+          "answer": "parties",
+          "rule": "Avec être, le participe passé s'accorde avec le sujet."
+        }
+      ],
+      "vocabulaire": [
+        {
+          "question": "Quel est le synonyme de 'joyeux' ?",
+          "answer": "heureux, content, enjoué",
+          "rule": "Les synonymes enrichissent le vocabulaire."
+        },
+        {
+          "question": "Trouve le mot familier pour 'automobile'",
+          "answer": "bagnole",
+          "rule": "Le registre familier est souvent utilisé à l’oral."
         }
       ]
     };
@@ -115,6 +148,16 @@
     let currentTheme = "";
     let currentIndex = 0;
     let correctCount = 0;
+
+    window.onload = () => {
+      const themeSelect = document.getElementById("themeSelect");
+      Object.keys(cardsByTheme).forEach(theme => {
+        const option = document.createElement("option");
+        option.value = theme;
+        option.textContent = theme.charAt(0).toUpperCase() + theme.slice(1);
+        themeSelect.appendChild(option);
+      });
+    };
 
     function startTheme(theme) {
       if (!theme || !cardsByTheme[theme]) return;
