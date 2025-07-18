@@ -1,0 +1,62 @@
+{
+  "grammaire": [
+    {
+      "question": "Quel est le COD dans : Elle a offert un cadeau à son frère ?",
+      "answer": "un cadeau",
+      "rule": "Le COD est ce qui subit directement l'action du verbe."
+    },
+    {
+      "question": "Quel est le sujet dans : Les enfants jouent dans le parc.",
+      "answer": "Les enfants",
+      "rule": "Le sujet est celui qui fait l'action exprimée par le verbe."
+    }
+  ],
+  "vocabulaire": [
+    {
+      "question": "Quel est le synonyme de 'joyeux' ?",
+      "answer": "content, heureux",
+      "rule": "Les synonymes sont des mots de sens proche."
+    },
+    {
+      "question": "Quel est le contraire de 'rapide' ?",
+      "answer": "lent",
+      "rule": "Les contraires sont des mots de sens opposé."
+    }
+  ],
+  "maths": [
+    {
+      "question": "Combien font 7 x 8 ?",
+      "answer": "56",
+      "rule": "C'est une multiplication de base."
+    },
+    {
+      "question": "Quel est le périmètre d’un carré de 5 cm de côté ?",
+      "answer": "20 cm",
+      "rule": "Périmètre = 4 x côté"
+    }
+  ],
+  "géographie": [
+    {
+      "question": "Quelle est la capitale de l’Espagne ?",
+      "answer": "Madrid",
+      "rule": "Les capitales sont les villes principales d’un pays."
+    },
+    {
+      "question": "Sur quel continent se trouve l’Argentine ?",
+      "answer": "Amérique du Sud",
+      "rule": "L’Argentine est un pays d’Amérique latine."
+    }
+  ],
+  "culture générale": [
+    {
+      "question": "Qui a peint La Joconde ?",
+      "answer": "Léonard de Vinci",
+      "rule": "C'est un peintre de la Renaissance italienne."
+    },
+    {
+      "question": "Quel est l’auteur de 'Les Misérables' ?",
+      "answer": "Victor Hugo",
+      "rule": "Victor Hugo est un écrivain français du XIXe siècle."
+    }
+  ]
+}
